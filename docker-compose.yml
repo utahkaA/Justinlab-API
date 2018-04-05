@@ -1,0 +1,11 @@
+version: '3'
+volumes:
+  maria-data-dev:
+    external: true
+services:
+  db:
+    image: mariadb:10.3.5
+    volumes:
+      - maria-data-dev:/var/lib/mysql
+    ports:
+      - 3307:3306
