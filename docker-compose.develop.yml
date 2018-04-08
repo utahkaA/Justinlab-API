@@ -11,5 +11,8 @@ services:
       - 3307:3306
   api:
     image: justinlab/gin
+    command: go run main.go
     volumes:
       - .:/go/src/app
+    ports:
+      - 8080:8080
